@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Frontend Mentor || REST Countries API Challenge</title>
+</head>
+    <body>
+
+        <div id="outer-container" class="outercontainer">
+
+            <header id="header-container" class="headercontainer">
+                <div class="headercontent">
+                    <h1 id="title-el" class="title"><a href="index.html" id="title-link" class="titlelink">Where in the world?</a></h1>
+                    <i id="lightdark-btn" class="fa fa-moon-o themechange"> Light Mode</i>
+                </div>
+            </header>
+
+            <div id="modal" class="modal-container">
+                <header id="modalheader-container" class="headercontainer">
+                    <div class="headercontent">
+                        <h1 id="modaltitle-el" class="title"><a href="index.html" id="modaltitle-link" class="titlelink">Where in the world?</a></h1>
+                        <i id="modallightdark-btn" class="fa fa-moon-o themechange"> Light Mode</i>
+                    </div>
+                </header>
+                <button id="back-btn" class="modalbackbtn"><i class="fa fa-arrow-left"></i> Back</button>
+                <div id="modal-country-container" class="modalcountrycontainer"></div>
+            </div>
+
+            <main class="maincontainer">
+                <div class="search">
+                    <div class="searchbar">
+                        <i id="fasearch-el" class="fa fa-search">
+                        <input id="searchinput-el" class="searchbox" type="text" placeholder="Search for a country..." name="search">
+                        </i>
+                    </div>
+                    <div id="dropdown-list" class="dropdown">
+                        Filter by Region
+                        <i class="fa fa-chevron-down"></i>
+                        <ul id="regionlist-el" class="regionlist">
+                            <li id="filterafrica-el" class="filteroption">Africa</li>
+                            <li id="filteramericas-el" class="filteroption">America</li>
+                            <li id="filterasia-el" class="filteroption">Asia</li>
+                            <li id="filtereurope-el" class="filteroption">Europe</li>
+                            <li id="filteroceania-el" class="filteroption">Oceania</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="country-container" class="countrycontainer">
+                    <div id="countrycard-el" class="countrycardcontainer"></div>
+                </div>
+            </main>
+
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
