@@ -1,8 +1,3 @@
-// TO DO LIST IN PROGRESS
-// Fix the Border Countries buttons on Modal page
-// Fix the Search/Filter results feature on Index page
-// Fix the Theme Change for country card info sections on Index page
-
 var outerContainer = document.getElementById("outer-container");
 var headerContainer = document.getElementById("header-container");
 var modalHeaderContainer = document.getElementById("modalheader-container");
@@ -105,9 +100,9 @@ searchInputEl.addEventListener("keyup", (e) => {
     
     countryName.forEach(name => {
         if(name.innerHTML.toLowerCase().includes(searchValue.toLowerCase())) {
-            name.parentElement.parentElement.style.display = "block";
+            name.parentElement.parentElement.parentElement.style.display = "block";
         } else {
-            name.parentElement.parentElement.style.display = "none";
+            name.parentElement.parentElement.parentElement.style.display = "none";
         }
     });
 });
@@ -121,15 +116,21 @@ dropDownEl.addEventListener("click", () => {
 });
 
 filterRegion.forEach(filter => {
+    if(regionListEl.style.display === "none") {
+        regionListEl.style.display = "block";
+    } else {
+        regionListEl.style.display = "none";
+    }
+
     filter.addEventListener("click", () => {
         var value = filter.innerHTML;
         var countryRegion = document.querySelectorAll(".countryregion");
 
         countryRegion.forEach(region => {
             if(region.innerHTML.toLowerCase().includes(value.toLowerCase())) {
-                region.parentElement.parentElement.style.display = "block";
+                region.parentElement.parentElement.parentElement.style.display = "block";
             } else {
-                region.parentElement.parentElement.style.display = "none";
+                region.parentElement.parentElement.parentElement.style.display = "none";
             }
         });
     })
