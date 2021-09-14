@@ -197,7 +197,7 @@ function modalCountryDetails(country) {
                 </div>
                 <div class="borders">
                     <h3 class="bordercountries">Border Countries:</h3>
-                    <button class="countryinfo countrydetails countrybordercountries">${country.borders}</button>
+                    ${country.borders}
                 </div>
             </div>
         </div>
@@ -208,4 +208,7 @@ backButton.addEventListener("click", () => {
     modal.style.display = "none";
     countryContainer.style.display = "grid";
 });
+
+
+
 
