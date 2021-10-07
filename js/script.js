@@ -150,15 +150,15 @@ function addCountryCards(allCountries) {
         countryCardEl.classList.add("countrycardcontainer");
 
         countryCardEl.innerHTML = `
-        <div id="countrycardinfo-el" class="countrycardinfo">
+        <div id="countrycardinfo-el" class="countrycardinfo lightmodeshadow lightmodeelement">
             <div id="image-container" class="imagecontainer">
                 <img class="countryflag" src="${country.flag}" alt="country flag image">
             </div>
-            <div id="countrydetails-container" class="countrycarddetailscontainer">
-                <h2 class="countryinfo countryname">${country.name}</h2>
-                <p class="countryinfo countrydetails countrypopulation"><strong>Population:  </strong>${country.population}</p>
-                <p class="countryinfo countrydetails countryregion"><strong>Region:  </strong>${country.region}</p>
-                <p class="countryinfo countrydetails countrycapital"><strong>Capital:  </strong>${country.capital}</p>
+            <div id="countrydetails-container" class="countrycarddetailscontainer lightmodetext lightmodeelement">
+                <h2 class="countryinfo lightmodetext lightmodeelement countryname">${country.name}</h2>
+                <p class="countryinfo lightmodetext lightmodeelement countrydetails countrypopulation"><strong>Population:  </strong>${country.population}</p>
+                <p class="countryinfo lightmodetext lightmodeelement countrydetails countryregion"><strong>Region:  </strong>${country.region}</p>
+                <p class="countryinfo lightmodetext lightmodeelement countrydetails countrycapital"><strong>Capital:  </strong>${country.capital}</p>
             </div>
         </div>
         `;
@@ -197,7 +197,9 @@ function modalCountryDetails(country) {
                 </div>
                 <div class="borders">
                     <h3 class="bordercountries">Border Countries:</h3>
-                    ${country.borders}
+                    ${country.borders.map(border => `
+                    <button id="border-btn">${border}</button>
+                    `)}
                 </div>
             </div>
         </div>
