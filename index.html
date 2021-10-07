@@ -4,86 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Misty, R., Griffin, web, developer, app, apps, HTML, CSS, JavaScript, React, MySQL, Python, entry level, programming">
-    <meta name="description" content="This is the main website for Misty R. Griffin, a freelance web developer.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <title>Misty R. Griffin</title>
+    <title>Frontend Mentor || REST Countries API Challenge</title>
 </head>
-<body>
-    <div class="outermost-container">
-        <div class="leftsidebar-container">
-            <ul class="menu-container">
-                <li><a href="#home-section">Home</a></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#portfolio-section">Portfolio</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-                <li><a href="assets/Misty Griffin Resume.pdf" target="_blank" class="myresumelink">Resume</a></li>
-            </ul>
-        </div>
-        <div class="maincontent-container">
-            <div id="mobileheader" class="mobile-header">
-                <img id="mobile-menu-btn" src="images/menu.svg" alt="Menu icon" onclick="mobileMenu()">
-                <div id="mobile-popup" class="mobile-menu-popup">
-                    <div class="mobile-menu-content">
-                        <a href="#home-section">Home</a>
-                        <a href="#about-section">About</a>
-                        <a href="#portfolio-section">Portfolio</a>
-                        <a href="#contact-section">Contact</a>
-                        <a href="assets/Misty Griffin Resume.pdf" target="_blank" class="myresumelink">Resume</a>
-                        <img id="mobile-exit-btn" src="images/exit.svg" alt="Exit icon" onclick="mobileMenu()">
+    <body class="lightmodebackground">
+
+        <div id="outer-container" class="outercontainer lightmodebackground">
+
+            <header id="header-container" class="headercontainer lightmodeshadow lightmodeelement">
+                <div class="headercontent">
+                    <h1 id="title-el" class="title lightmodeshadow lightmodetext"><a href="index.html" id="title-link" class="titlelink lightmodetext">Where in the world?</a></h1>
+                    <i id="lightdark-btn" class="fa fa-moon-o lightmodetext themechange"> Light Mode</i>
+                </div>
+            </header>
+
+            <div id="modal" class="modal-container lightmodebackground">
+                <header id="modalheader-container" class="headercontainer">
+                    <div class="headercontent">
+                        <h1 id="modaltitle-el" class="title"><a href="index.html" id="modaltitle-link" class="titlelink">Where in the world?</a></h1>
+                        <i id="modallightdark-btn" class="fa fa-moon-o themechange"> Light Mode</i>
+                    </div>
+                </header>
+                <button id="back-btn" class="modalbackbtn lightmodeshadow lightmodetext lightmodeelement"><i class="fa fa-arrow-left"></i> Back</button>
+                <div id="modal-country-container" class="modalcountrycontainer lightmodetext"></div>
+            </div>
+
+            <main class="maincontainer">
+                <div class="search">
+                    <div class="searchbar lightmodeshadow lightmodeelement">
+                        <i id="fasearch-el" class="fa fa-search lightmodetext lightmodeelement">
+                        <input id="searchinput-el" class="searchbox lightmodetext" type="text" placeholder="Search for a country..." name="search">
+                        </i>
+                    </div>
+                    <div id="dropdown-list" class="dropdown lightmodeshadow lightmodetext lightmodeelement">
+                        Filter by Region
+                        <i class="fa fa-chevron-down"></i>
+                        <ul id="regionlist-el" class="regionlist lightmodeshadow lightmodetext lightmodeelement">
+                            <li id="filterafrica-el" class="filteroption">Africa</li>
+                            <li id="filteramericas-el" class="filteroption">America</li>
+                            <li id="filterasia-el" class="filteroption">Asia</li>
+                            <li id="filtereurope-el" class="filteroption">Europe</li>
+                            <li id="filteroceania-el" class="filteroption">Oceania</li>
+                        </ul>
                     </div>
                 </div>
-                <script src="js/script.js"></script>
-            </div>
-            <header id="home-section" class="header-container">
-                <img class="headerbackground-image" src="images/headerimg.jfif" alt="Computer screen with programming language">
-                <div class="headeroverlay"></div>
-                <h1>Misty R. Griffin</h1>
-                <h2>Web Developer</h2>
-            </header>
-            <div id="about-section" class="aboutme-container">
-                <div class="textboxes">
-                    <p class="experience"><span>EXPERIENCE</span><br>Proofreading, revising, editing, and scrupulous attention to detail are skills I possess from my previous positions as an educator and web/database administrator. In addition to a strong work ethic, I have an excellent reputation for working efficiently, often completing tasks and projects ahead of schedule while maintaining high quality and accuracy.</p>
-                    <p class="skillset"><span>SKILLS</span><br>I am self-taught with courses in HTML, CSS, JavaScript, and Python. Also, I am currently taking courses in React, AdobeXD, PHP, and MySQL. I regularly code challenges and projects to continuously improve my web development skills.</p>
-                    <p class="goals"><span>GOALS</span><br>I am looking for an opportunity to enhance my web development skills by working with a team that runs on clear communication. I want to align myself with a company I believe in and where I can make valuable contributions. I am always looking to learn more and am open to taking on challenging projects.</p>
+                <div id="country-container" class="countrycontainer">
+                    <div id="countrycard-el" class="countrycardcontainer"></div>
                 </div>
-            </div>
-            <div id="portfolio-section" class="portfolio-container">
-                <div class="portfoliooverlay"></div>
-                <h2>PORTFOLIO</h2>
-                <div class="portfolio-carousel">
-                    <a href="#" target="_blank" class="rcapi-challenge">REST Countries API Coming Soon...<br><img id="restcountriesimage" src="images/restcountriesapiimg.jpg" alt="REST Countries website image"></a>
-                    <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rpsls/" target="_blank" class="rpsls-challenge">Rock, Paper, Scissors Challenge<br><img id="rpslsimage" src="images/rpsls_mistygriffin.png" alt="Rock, Paper, Scissors game image"></a>
-                    <a href="https://mistyrgriffin.github.io/codepenchallenge_cafe/" target="_blank" class="cc-codepen-challenge">Cascade Cafe Challenge<br><img id="cafeimage" src="images/cascadecafe_mistyrgriffin.png" alt="Coffee shop website image"></a>
-                </div>
-            </div>
-            <div class="contact-section">
-                <p class="contact-title">CONTACT ME</p>
-                <div id="contact-section" class="contactme-container">
-                    <form action="https://formsubmit.co/mistyrgriffin@gmail.com" method="POST">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="http://www.mistyrgriffin.com">
-                        <input type="text" name="name" placeholder="Name*" required>
-                        <input type="email" name="email" placeholder="Email*" required>
-                        <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
-                        <button type="submit">SEND</button>
-                    </form>
-                <div id="social-media-section" class="socialmedia-container">
-                    <p class="socialconnections">SOCIAL</p>
-                    <a href="https://twitter.com/MistyRGriffin" target="_blank" class="fa fa-twitter"> Twitter</a>
-                    <a href="https://www.linkedin.com/in/mistyrgriffin/" target="_blank" class="fa fa-linkedin"> LinkedIn</a>
-                    <a href="https://github.com/mistyrgriffin" target="_blank" class="fa fa-github"> GitHub</a>
-                    <a href="https://codepen.io/mistyrgriffin" target="_blank" class="fa fa-codepen"> CodePen</a>
-                </div>
-                </div>
-            </div>
-            <footer class="footer-container">
-                <p>&copy2021 Misty R. Griffin</p>
-            </footer>
+            </main>
+
         </div>
-    </div>
-</body>
+
+        <script src="js/script.js"></script>
+    </body>
 </html>
